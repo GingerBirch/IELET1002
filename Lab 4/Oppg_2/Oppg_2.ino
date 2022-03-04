@@ -1,4 +1,3 @@
-#include <Wire.h>
 #include <Zumo32U4.h> // Inkluderer Zumo-biblioteket
 
 Zumo32U4ButtonA buttonA; // deklarerer knapp A
