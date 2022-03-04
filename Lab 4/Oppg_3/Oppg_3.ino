@@ -7,7 +7,6 @@ Zumo32U4Buzzer buzzer;
 Zumo32U4Motors motors;
 Zumo32U4LineSensors lineSensors;
 
-unsigned long calibrateTime = 0;
 const uint16_t maxSpeed = 400;
 int16_t lastError = 0;
 
@@ -17,7 +16,7 @@ unsigned int lineSensorValues[NUM_SENSORS];
 void sensorsCalibrate(){
   display.clear();
   delay(1000);
-  calibrateTime = millis() + 2000;
+  unsigned long calibrateTime = millis() + 2000;
   while (millis() < calibrateTime){
     motors.setRightSpeed(400);
     lineSensors.calibrate();
