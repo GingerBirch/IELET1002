@@ -15,23 +15,15 @@ void setup()
   display.clear();
 }
 
-void led_on(){
+void led_blink(){
   ledRed(1);
   ledYellow(1);
   ledGreen(1);
-}
-
-void led_off(){
+  delay(100);
   ledRed(0);
   ledYellow(0);
   ledGreen(0);
-}
-
-void led_blink(){
-    led_on();
-    delay(100);
-    led_off();
-    delay(100);
+  delay(100);
 }
 
 void aatteTall(){
