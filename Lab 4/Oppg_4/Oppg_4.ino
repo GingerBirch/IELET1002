@@ -13,11 +13,12 @@ const uint16_t maxSpeed = 400;
 void sensorsCalibrate(){
   display.clear();
   delay(1000);
-  for (int i = 0; i < 120; i++){
+  unsigned long calibrateTime = millis() + 2000;
+  while (millis() < calibrateTime){
     motors.setSpeeds(200, -200);
     lineSensors.calibrate();
   }
-  motors.setSpeeds(0, 0);
+  motors.setRightSpeed(0);
 }
 
 void setup() {
